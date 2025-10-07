@@ -1,0 +1,23 @@
+.request-transaction-button {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  text-align: center;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  background: #1d2027;
+  transform-style: preserve-3d;
+  position: relative;
+  color: #eeeeee;
+  border: 1px solid #30353f;
+  width: 100%;
+  font-size: 24px;
+  font-weight: 600;
+  margin-top: 50px;
+}
+
+.request-transaction-button:hover {
+  background: #323744;
+}

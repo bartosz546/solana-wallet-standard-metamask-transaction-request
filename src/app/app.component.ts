@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
+import {SolanaMetamaskWallet} from "../classes/SolanaMetamaskWallet";
 
 @Component({
   selector: 'app-root',
@@ -9,5 +10,16 @@ import { RouterOutlet } from '@angular/router';
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  title = 'solana-wallet-standard-metamask-transaction-request';
+  title = 'Solana Wallet Standard Metamask Transaction Request';
+  walletInstance: SolanaMetamaskWallet;
+
+  constructor() {
+    this.walletInstance = new SolanaMetamaskWallet();
+  }
+
+  async requestSolTransaction() {
+    // Example call to send 0.01 SOL to a new address
+    const trxId = await this.walletInstance.sendTransfer("DfmGdQph8UD5B5tDjNXfykgHgwZMguZq5WJJXsBpdCox", 10000000);
+    console.log(trxId);
+  }
 }
